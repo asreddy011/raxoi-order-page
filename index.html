@@ -5,94 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raxoi – Order Near You</title>
   <style>
+    :root {
+      --primary: #e74c3c;
+      --dark: #2c3e50;
+      --light: #fffaf5;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 20px;
-      background: #fffaf5;
+      background: var(--light);
       color: #333;
+      line-height: 1.6;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
     .logo {
       text-align: center;
-      margin-bottom: 25px;
+      margin: 30px 0 40px;
     }
+
     .logo img {
       max-width: 180px;
       height: auto;
+      border-radius: 12px;
     }
+
+    h1 {
+      text-align: center;
+      color: var(--dark);
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+
+    .tagline {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
     .branch {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-      background: #fff;
     }
+
     .branch h2 {
-      margin-top: 0;
-      color: #2c3e50;
+      margin: 0 0 15px 0;
+      color: var(--dark);
+      font-size: 1.5rem;
     }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
     .links a {
-      display: inline-block;
-      margin: 6px 8px 6px 0;
-      padding: 10px 14px;
-      background: #e74c3c;
+      padding: 12px 20px;
+      background: var(--primary);
       color: white;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s;
     }
+
+    .links a:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+    }
+
     .map-link {
-      margin-top: 10px;
-      display: block;
-      font-size: 13px;
       color: #2980b9;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
+
     .insta {
       text-align: center;
-      margin-top: 25px;
+      margin-top: 40px;
+      padding: 20px;
     }
-    .insta img {
-      height: 28px;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
+
     .insta a {
-      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       color: #c0392b;
       text-decoration: none;
-      font-size: 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .insta img {
+      height: 32px;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 15px; }
+      .logo img { max-width: 140px; }
+      h1 { font-size: 1.9rem; }
     }
   </style>
 </head>
 <body>
-
-  <div class="logo">
-<img src="raxoi-logo.png.PNG" alt="Raxoi Logo" style="max-width: 120px; height: auto;" />
-  </div>
-
-  <div class="branch">
-    <h2>Kompally</h2>
-    <div class="links">
-      <a href="https://zomato.onelink.me/xqzv/p0ry5h3v" target="_blank">Zomato</a>
-      <a href="https://www.swiggy.com/city/hyderabad/raxoi-alwal-rest1058653" target="_blank">Swiggy</a>
+  <div class="container">
+    <div class="logo">
+      <img src="raxoi-logo.png" alt="Raxoi Logo" />
     </div>
-    <a class="map-link" href="https://maps.app.goo.gl/HDnoLZKhL6D8iKXB6?g_st=com.google.maps.preview.copy" target="_blank">📍 Google Maps</a>
-  </div>
 
-  <div class="branch">
-    <h2>Kokapet</h2>
-    <div class="links">
-      <a href="https://www.swiggy.com/menu/1072247?source=sharing" target="_blank">Swiggy</a>
+    <h1>Raxoi</h1>
+    <p class="tagline">Gourmet Kitchen • Order Near You</p>
+
+    <div class="branch">
+      <h2>📍 Kompally</h2>
+      <div class="links">
+        <a href="https://zomato.onelink.me/xqzv/p0ry5h3v" target="_blank">🍽️ Order on Zomato</a>
+        <a href="https://www.swiggy.com/city/hyderabad/raxoi-alwal-rest1058653" target="_blank">🚀 Order on Swiggy</a>
+      </div>
+      <a class="map-link" href="https://maps.app.goo.gl/HDnoLZKhL6D8iKXB6" target="_blank">
+        📍 View on Google Maps
+      </a>
+    </div>
+
+    <div class="insta">
+      <a href="https://www.instagram.com/raxoigourmetkitchen" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"/>
+        Follow us @raxoigourmetkitchen
+      </a>
     </div>
   </div>
-
-  <div class="insta">
-    <a href="https://www.instagram.com/raxoigourmetkitchen?igsh=MXZod3dwNm1qMHlmeQ==" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"/>
-      Follow us @raxoigourmetkitchen
-    </a>
-  </div>
-
 </body>
 </html>
